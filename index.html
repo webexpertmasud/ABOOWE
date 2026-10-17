@@ -1,0 +1,1147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOOWE — Heritage Meets Everyday</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --dark: #172c25;
+            --green: #315c46;
+            --cream: #f7f4ec;
+            --gold: #d3a95e;
+            --muted: #777b72;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'DM Sans', sans-serif;
+            color: var(--dark);
+            background: #fff;
+        }
+
+        h1, h2, h3, h4, .brand-name {
+            font-family: 'Playfair Display', serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .announcement {
+            background: var(--dark);
+            color: #fff;
+            text-align: center;
+            font-size: 11px;
+            letter-spacing: 1.7px;
+            padding: 11px 10px;
+        }
+
+        .navbar {
+            padding: 19px 0;
+            background: #fff;
+        }
+
+        .brand-name {
+            font-size: 29px;
+            font-weight: 700;
+            letter-spacing: 4px;
+        }
+
+        .brand-subtitle {
+            font-size: 9px;
+            letter-spacing: 3px;
+            display: block;
+            margin-top: -5px;
+            text-align: center;
+        }
+
+        .navbar .nav-link {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: var(--dark);
+            margin: 0 10px;
+        }
+
+        .navbar .nav-link:hover {
+            color: var(--gold);
+        }
+
+        .nav-icon {
+            font-size: 19px;
+            margin-left: 17px;
+        }
+
+        .hero {
+            min-height: 600px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(90deg,
+                    rgba(16, 35, 27, .88) 0%,
+                    rgba(16, 35, 27, .68) 43%,
+                    rgba(16, 35, 27, .05) 100%),
+                url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=2000&q=85')
+                center 36% / cover no-repeat;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            padding: 80px 0;
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            letter-spacing: 3px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(46px, 6.5vw, 82px);
+            line-height: 1.08;
+            margin: 24px 0;
+        }
+
+        .hero h1 em {
+            color: #e4c58c;
+            font-weight: 500;
+        }
+
+        .hero p {
+            max-width: 440px;
+            font-size: 15px;
+            line-height: 1.9;
+            color: rgba(255,255,255,.85);
+        }
+
+        .btn-brand {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 25px;
+            border: 1px solid var(--gold);
+            background: var(--gold);
+            color: #182b22;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            transition: .3s;
+        }
+
+        .btn-brand:hover {
+            background: transparent;
+            color: #fff;
+            border-color: #fff;
+        }
+
+        .btn-outline-brand {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 23px;
+            border: 1px solid var(--dark);
+            color: var(--dark);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            transition: .3s;
+        }
+
+        .btn-outline-brand:hover {
+            background: var(--dark);
+            color: white;
+        }
+
+        .hero-note {
+            position: absolute;
+            bottom: 25px;
+            right: 5%;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: white;
+        }
+
+        .benefits {
+            padding: 25px 0;
+            background: var(--cream);
+            border-bottom: 1px solid #e8e4d9;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: 11px;
+            letter-spacing: .5px;
+            font-weight: 600;
+        }
+
+        .benefit-item i {
+            font-size: 21px;
+            color: var(--green);
+        }
+
+        .section-padding {
+            padding: 90px 0;
+        }
+
+        .section-heading {
+            font-size: clamp(32px, 4vw, 46px);
+            margin: 13px 0;
+        }
+
+        .section-description {
+            font-size: 13px;
+            line-height: 1.9;
+            color: var(--muted);
+        }
+
+        .text-gold {
+            color: #b68b43;
+        }
+
+        .collection-card {
+            position: relative;
+            overflow: hidden;
+            background: var(--cream);
+            height: 430px;
+        }
+
+        .collection-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .7s;
+        }
+
+        .collection-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .collection-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg,
+                rgba(13, 31, 23, .78),
+                transparent 60%);
+        }
+
+        .collection-content {
+            position: absolute;
+            bottom: 28px;
+            left: 28px;
+            z-index: 1;
+            color: white;
+        }
+
+        .collection-content h3 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .collection-link {
+            font-size: 10px;
+            letter-spacing: 1.7px;
+            font-weight: 700;
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 5px;
+        }
+
+        .products-section {
+            background: #faf9f5;
+        }
+
+        .product-card {
+            position: relative;
+        }
+
+        .product-image {
+            position: relative;
+            overflow: hidden;
+            background: #eeece5;
+            aspect-ratio: 4 / 5;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .5s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-tag {
+            position: absolute;
+            top: 13px;
+            left: 13px;
+            background: white;
+            padding: 7px 10px;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .product-action {
+            position: absolute;
+            right: 12px;
+            bottom: 12px;
+            width: 43px;
+            height: 43px;
+            border: none;
+            border-radius: 50%;
+            background: white;
+            color: var(--dark);
+            font-size: 20px;
+            transition: .3s;
+        }
+
+        .product-action:hover {
+            background: var(--dark);
+            color: white;
+        }
+
+        .product-info {
+            padding: 17px 0 28px;
+        }
+
+        .product-info h6 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 9px;
+        }
+
+        .product-price {
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .product-rating {
+            font-size: 10px;
+            color: #a9813e;
+            letter-spacing: 1px;
+        }
+
+        .story-section {
+            background: var(--dark);
+            color: white;
+        }
+
+        .story-image {
+            height: 530px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .story-copy {
+            padding: 45px 7%;
+        }
+
+        .story-copy p {
+            color: rgba(255,255,255,.72);
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .story-copy .section-heading {
+            line-height: 1.25;
+        }
+
+        .story-mark {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold);
+            font-size: 22px;
+            letter-spacing: 4px;
+            margin-top: 25px;
+        }
+
+        .quote-section {
+            background: var(--cream);
+            text-align: center;
+            padding: 85px 20px;
+        }
+
+        .quote-icon {
+            font-size: 38px;
+            color: var(--gold);
+        }
+
+        .quote-text {
+            max-width: 750px;
+            margin: 20px auto;
+            font-size: clamp(22px, 3vw, 34px);
+            line-height: 1.55;
+        }
+
+        .quote-author {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .newsletter {
+            padding: 75px 0;
+            background: #e9e6da;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 470px;
+            border-bottom: 1px solid #788075;
+            margin: 25px auto 0;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            min-width: 0;
+            border: 0;
+            outline: 0;
+            background: transparent;
+            padding: 15px 5px;
+            font-size: 13px;
+        }
+
+        .newsletter-form button {
+            border: 0;
+            background: transparent;
+            padding: 10px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            background: #13241d;
+            color: white;
+            padding: 65px 0 25px;
+        }
+
+        footer .footer-description {
+            color: #b7c0b8;
+            font-size: 12px;
+            line-height: 1.9;
+            max-width: 290px;
+        }
+
+        footer h6 {
+            font-size: 10px;
+            letter-spacing: 2px;
+            margin-bottom: 22px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 13px;
+        }
+
+        footer ul a {
+            color: #b7c0b8;
+            font-size: 12px;
+        }
+
+        footer ul a:hover {
+            color: var(--gold);
+        }
+
+        .social-link {
+            font-size: 19px;
+            margin-right: 17px;
+        }
+
+        .footer-bottom {
+            margin-top: 45px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,.12);
+            color: #aab4ab;
+            font-size: 10px;
+        }
+
+        .cart-count {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 17px;
+            height: 17px;
+            background: var(--gold);
+            color: var(--dark);
+            font-size: 10px;
+            border-radius: 50%;
+            vertical-align: top;
+            margin-left: -5px;
+        }
+
+        @media (max-width: 991px) {
+            .navbar .nav-link {
+                margin: 5px 0;
+            }
+
+            .nav-icon {
+                margin-left: 8px;
+            }
+
+            .hero {
+                min-height: 540px;
+                background-position: 60% center;
+            }
+
+            .collection-card {
+                height: 350px;
+            }
+
+            .story-image {
+                height: 420px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .brand-name {
+                font-size: 25px;
+            }
+
+            .hero {
+                min-height: 540px;
+                background-position: 60% center;
+            }
+
+            .hero-content {
+                padding: 65px 10px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero p {
+                font-size: 13px;
+            }
+
+            .benefit-item {
+                font-size: 10px;
+                justify-content: flex-start;
+                padding: 8px 10px;
+            }
+
+            .section-padding {
+                padding: 60px 0;
+            }
+
+            .collection-card {
+                height: 340px;
+            }
+
+            .collection-content {
+                left: 20px;
+                bottom: 20px;
+            }
+
+            .collection-content h3 {
+                font-size: 26px;
+            }
+
+            .story-copy {
+                padding: 40px 15px;
+            }
+
+            .story-image {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement">
+        ROOTED IN HERITAGE. MADE FOR EVERYDAY.
+        <span class="d-none d-md-inline"> &nbsp; | &nbsp; DISCOVER ABOOWE</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand me-lg-5" href="#">
+                <span class="brand-name">ABOOWE</span>
+                <span class="brand-subtitle">CULTURE · IDENTITY · STYLE</span>
+            </a>
+
+            <div class="d-flex align-items-center order-lg-3">
+                <a href="#products" class="nav-icon" aria-label="Search">
+                    <i class="bi bi-search"></i>
+                </a>
+                <a href="#products" class="nav-icon" aria-label="Shopping bag">
+                    <i class="bi bi-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <button class="navbar-toggler ms-3" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#mainNav"
+                        aria-controls="mainNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse order-lg-2" id="mainNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#collections">SHOP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">BESTSELLERS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#story">OUR STORY</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#footer">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="eyebrow">
+                    <i class="bi bi-stars me-2"></i>
+                    A STORY WOVEN INTO EVERYDAY LIFE
+                </div>
+
+                <h1>
+                    Wear Your<br>
+                    Roots. <em>Own</em><br>
+                    Your Story.
+                </h1>
+
+                <p>
+                    More than what you wear. A celebration of Somali
+                    heritage, cultural identity, and the confidence to
+                    express who you are — wherever life takes you.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3 mt-4">
+                    <a href="#collections" class="btn-brand">
+                        EXPLORE THE COLLECTION
+                        <i class="bi bi-arrow-up-right"></i>
+                    </a>
+                    <a href="#story" class="btn btn-outline-light rounded-0 px-4 py-3"
+                       style="font-size:11px; letter-spacing:1px;">
+                        OUR STORY
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-note d-none d-md-block">
+            SOMALI HERITAGE · GLOBAL LIFESTYLE
+        </div>
+    </header>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-6 col-lg-3">
+                    <div class="benefit-item">
+                        <i class="bi bi-globe-americas"></i>
+                        <span>HERITAGE INSPIRED</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <div class="benefit-item">
+                        <i class="bi bi-box-seam"></i>
+                        <span>MADE TO ORDER</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <div class="benefit-item">
+                        <i class="bi bi-heart"></i>
+                        <span>MADE WITH PURPOSE</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <div class="benefit-item">
+                        <i class="bi bi-shield-check"></i>
+                        <span>SECURE CHECKOUT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections -->
+    <section class="section-padding" id="collections">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="eyebrow text-gold">FIND YOUR EXPRESSION</div>
+                <h2 class="section-heading">Collections With Meaning</h2>
+                <p class="section-description">
+                    Thoughtfully designed pieces. One culture. Endless ways to express it.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a href="#products">
+                        <div class="collection-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=850&q=85"
+                                alt="Contemporary fashion collection"
+                                loading="lazy">
+
+                            <div class="collection-content">
+                                <div class="eyebrow mb-2">EVERYDAY ESSENTIALS</div>
+                                <h3>For Him</h3>
+                                <span class="collection-link">
+                                    SHOP MEN <i class="bi bi-arrow-up-right ms-2"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="#products">
+                        <div class="collection-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=850&q=85"
+                                alt="Modern women's fashion collection"
+                                loading="lazy">
+
+                            <div class="collection-content">
+                                <div class="eyebrow mb-2">CONFIDENCE IN EVERY THREAD</div>
+                                <h3>For Her</h3>
+                                <span class="collection-link">
+                                    SHOP WOMEN <i class="bi bi-arrow-up-right ms-2"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="#products">
+                        <div class="collection-card">
+                            <img
+                                src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=850&q=85"
+                                alt="Minimal everyday apparel"
+                                loading="lazy">
+
+                            <div class="collection-content">
+                                <div class="eyebrow mb-2">THE DETAILS MATTER</div>
+                                <h3>Accessories</h3>
+                                <span class="collection-link">
+                                    SHOP ACCESSORIES <i class="bi bi-arrow-up-right ms-2"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="section-padding products-section" id="products">
+        <div class="container">
+            <div class="row align-items-end mb-5">
+                <div class="col-md-8">
+                    <div class="eyebrow text-gold">YOUR NEW EVERYDAY FAVORITES</div>
+                    <h2 class="section-heading">The Signature Edit</h2>
+                    <p class="section-description mb-0">
+                        Everyday essentials with a story worth sharing.
+                    </p>
+                </div>
+
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <a href="#collections" class="btn-outline-brand">
+                        VIEW ALL PRODUCTS <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row g-3 g-md-4">
+
+                <!-- Product 1 -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85"
+                                alt="Classic everyday t-shirt"
+                                loading="lazy">
+
+                            <span class="product-tag">BESTSELLER</span>
+
+                            <button class="product-action add-cart"
+                                    type="button"
+                                    aria-label="Add Classic Heritage Tee to cart"
+                                    data-name="Classic Heritage Tee">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-rating mb-2">★★★★★ <span class="text-muted"> (24)</span></div>
+                            <h6>Classic Heritage Tee</h6>
+                            <div class="product-price">$28.00 CAD</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=700&q=85"
+                                alt="Contemporary premium streetwear"
+                                loading="lazy">
+
+                            <span class="product-tag">NEW ARRIVAL</span>
+
+                            <button class="product-action add-cart"
+                                    type="button"
+                                    aria-label="Add Everyday Statement Hoodie to cart"
+                                    data-name="Everyday Statement Hoodie">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-rating mb-2">★★★★★ <span class="text-muted"> (18)</span></div>
+                            <h6>Everyday Statement Hoodie</h6>
+                            <div class="product-price">$55.00 CAD</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=700&q=85"
+                                alt="Minimal casual clothing"
+                                loading="lazy">
+
+                            <button class="product-action add-cart"
+                                    type="button"
+                                    aria-label="Add Roots Oversized Tee to cart"
+                                    data-name="Roots Oversized Tee">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-rating mb-2">★★★★★ <span class="text-muted"> (12)</span></div>
+                            <h6>Roots Oversized Tee</h6>
+                            <div class="product-price">$32.00 CAD</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85"
+                                alt="Lifestyle accessories and sneakers"
+                                loading="lazy">
+
+                            <span class="product-tag">POPULAR</span>
+
+                            <button class="product-action add-cart"
+                                    type="button"
+                                    aria-label="Add ABOOWE Lifestyle Collection item to cart"
+                                    data-name="ABOOWE Lifestyle Collection">
+                                <i class="bi bi-plus"></i>
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-rating mb-2">★★★★★ <span class="text-muted"> (16)</span></div>
+                            <h6>ABOOWE Lifestyle Collection</h6>
+                            <div class="product-price">$35.00 CAD</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="#collections" class="btn-outline-brand">
+                    EXPLORE THE COLLECTION <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Story -->
+    <section class="story-section" id="story">
+        <div class="container-fluid px-0">
+            <div class="row g-0 align-items-center">
+
+                <div class="col-lg-6">
+                    <img
+                        class="story-image"
+                        src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1200&q=85"
+                        alt="Creative culture and community"
+                        loading="lazy">
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="story-copy">
+                        <div class="eyebrow text-gold">MORE THAN A BRAND</div>
+
+                        <h2 class="section-heading">
+                            Our Roots Run Deep.<br>
+                            Our Story Goes Far.
+                        </h2>
+
+                        <p class="mt-4">
+                            ABOOWE was created to celebrate the beauty of
+                            Somali heritage and the people who carry it
+                            forward. We believe your culture is not just
+                            where you come from — it's part of who you are.
+                        </p>
+
+                        <p>
+                            Through expressive designs and everyday
+                            essentials, we bring culture, community and
+                            contemporary style together in pieces you can
+                            wear with pride.
+                        </p>
+
+                        <div class="story-mark">ABOOWE.</div>
+
+                        <a href="#newsletter" class="btn-brand mt-4">
+                            BE PART OF OUR STORY
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Statement -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-icon">
+                <i class="bi bi-quote"></i>
+            </div>
+
+            <h2 class="quote-text">
+                “Your heritage is your strength.
+                Your identity is your statement.
+                Wear both with pride.”
+            </h2>
+
+            <div class="quote-author text-gold">
+                THE ABOOWE PHILOSOPHY
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter text-center" id="newsletter">
+        <div class="container">
+            <div class="eyebrow text-gold">STAY CONNECTED</div>
+
+            <h2 class="section-heading">
+                A Little Culture in Your Inbox.
+            </h2>
+
+            <p class="section-description">
+                Be the first to discover new collections, exclusive offers,
+                and stories that celebrate our heritage.
+            </p>
+
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" id="newsletterEmail"
+                       placeholder="Your email address"
+                       aria-label="Your email address"
+                       required>
+
+                <button type="submit">
+                    SUBSCRIBE <i class="bi bi-arrow-right ms-2"></i>
+                </button>
+            </form>
+
+            <p class="small text-muted mt-3" id="newsletterMessage">
+                By subscribing, you agree to receive updates from ABOOWE.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row g-5">
+
+                <div class="col-lg-4 col-md-6">
+                    <a href="#" class="d-inline-block mb-4">
+                        <span class="brand-name">ABOOWE</span>
+                        <span class="brand-subtitle">CULTURE · IDENTITY · STYLE</span>
+                    </a>
+
+                    <p class="footer-description mt-4">
+                        Celebrating Somali heritage through contemporary
+                        lifestyle products. Wear your roots. Own your story.
+                    </p>
+
+                    <div class="mt-4">
+                        <a class="social-link" href="#footer" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a class="social-link" href="#footer" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a class="social-link" href="#footer" aria-label="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                        <a class="social-link" href="#footer" aria-label="Pinterest">
+                            <i class="bi bi-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2 col-md-3">
+                    <h6>EXPLORE</h6>
+                    <ul>
+                        <li><a href="#collections">Shop All</a></li>
+                        <li><a href="#products">Bestsellers</a></li>
+                        <li><a href="#collections">Men</a></li>
+                        <li><a href="#collections">Women</a></li>
+                        <li><a href="#collections">Accessories</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-2 col-md-3">
+                    <h6>HELP</h6>
+                    <ul>
+                        <li><a href="#footer">Contact Us</a></li>
+                        <li><a href="#footer">Shipping</a></li>
+                        <li><a href="#footer">Returns</a></li>
+                        <li><a href="#footer">FAQs</a></li>
+                        <li><a href="#footer">Track Order</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6>OUR PROMISE</h6>
+                    <p class="footer-description">
+                        Every piece is an opportunity to celebrate identity,
+                        express individuality, and carry your culture forward.
+                    </p>
+                    <div class="small mt-3">
+                        <i class="bi bi-envelope me-2 text-gold"></i>
+                        Stay connected with ABOOWE
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom d-flex flex-column flex-md-row
+                        justify-content-between gap-3">
+                <span>© <span id="currentYear"></span> ABOOWE. ALL RIGHTS RESERVED.</span>
+
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="#footer">Privacy Policy</a>
+                    <a href="#footer">Terms of Service</a>
+                    <a href="#footer">Refund Policy</a>
+                </div>
+
+                <span>
+                    <i class="bi bi-credit-card me-1"></i>
+                    Secure Shopping
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Current year
+        document.getElementById('currentYear').textContent =
+            new Date().getFullYear();
+
+        // Demo cart counter
+        let cartCount = 0;
+
+        document.querySelectorAll('.add-cart').forEach(function(button) {
+            button.addEventListener('click', function() {
+                cartCount++;
+
+                document.getElementById('cartCount').textContent = cartCount;
+
+                const icon = this.querySelector('i');
+                icon.classList.remove('bi-plus');
+                icon.classList.add('bi-check2');
+
+                this.setAttribute('aria-label', 'Added to demo cart');
+
+                setTimeout(() => {
+                    icon.classList.remove('bi-check2');
+                    icon.classList.add('bi-plus');
+                    this.setAttribute(
+                        'aria-label',
+                        'Add ' + this.dataset.name + ' to cart'
+                    );
+                }, 1000);
+            });
+        });
+
+        // Demo newsletter form
+        document.getElementById('newsletterForm').addEventListener(
+            'submit',
+            function(event) {
+                event.preventDefault();
+
+                const email = document.getElementById('newsletterEmail');
+
+                document.getElementById('newsletterMessage').textContent =
+                    'Thank you for your interest in ABOOWE! Connect a newsletter service to save subscriptions.';
+
+                email.value = '';
+            }
+        );
+    </script>
+
+</body>
+</html>
